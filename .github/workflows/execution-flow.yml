@@ -84,9 +84,6 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v4
-      - name: Cache dependencies
-        id: cache
-        uses: actions/cache@v4
       - name: Information output
         run: |
          echo "Test failed. Please check the test report."
