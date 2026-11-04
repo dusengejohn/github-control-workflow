@@ -90,3 +90,4 @@ jobs:
       - name: Information output
         run: |
          echo "Test failed. Please check the test report."
+         echo "${{ toJSON(github.event) }}"
