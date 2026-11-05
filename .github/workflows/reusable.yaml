@@ -17,3 +17,5 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                 name: ${{ inputs.artifacts }}
+            - name: Output contents
+              run: ls -la
