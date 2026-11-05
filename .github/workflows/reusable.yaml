@@ -5,7 +5,7 @@ on:
       artifacts:
         description: 'Artifacts to deploy'
         required: false
-        default: 'dist'
+        default: 'dist-files'
         type: string
 jobs:
     deploy:
