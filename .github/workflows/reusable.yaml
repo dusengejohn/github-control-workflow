@@ -1,0 +1,9 @@
+name: Resusable workflow demo
+on:
+  workflow_call:
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy to server
+              run: echo "Deploying to server..."
