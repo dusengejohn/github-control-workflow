@@ -1,9 +1,19 @@
 name: Resusable workflow demo
 on:
   workflow_call:
+    inputs:
+      artifacts:
+        description: 'Artifacts to deploy'
+        required: false
+        default: 'dist'
+        type: string
 jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
             - name: Deploy to server
               run: echo "Deploying to server..."
+            - name: Get build artifacts
+              uses: actions/download-artifact@v4
+              with:
+                name: ${{ inputs.artifacts }}
